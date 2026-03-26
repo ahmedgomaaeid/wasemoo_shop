@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title', 'Wasemoo Shop')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans antialiased selection:bg-indigo-500 selection:text-white flex flex-col min-h-screen">
     <nav class="bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50">

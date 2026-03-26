@@ -17,6 +17,13 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/section/{slug}', [HomeController::class, 'section'])->name('frontend.section');
 Route::get('/product/{slug}', [ProductController::class, 'show'])->name('frontend.product');
 
+use App\Http\Controllers\CheckoutController;
+// Checkout Routes
+Route::post('/checkout/{product}', [CheckoutController::class, 'process'])->name('checkout.process');
+Route::get('/checkout/callback', [CheckoutController::class, 'callback'])->name('checkout.callback');
+Route::get('/checkout/success/{order}', [CheckoutController::class, 'success'])->name('checkout.success');
+Route::get('/checkout/failed/{order}', [CheckoutController::class, 'failed'])->name('checkout.failed');
+
 // Admin Routes
 Route::prefix('admin')->name('admin.')->group(function () {
     // Guest Admin Routes
