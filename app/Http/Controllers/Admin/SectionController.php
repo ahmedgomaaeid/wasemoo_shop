@@ -25,7 +25,7 @@ class SectionController extends Controller
         $request->validate([
             'name' => 'required|string|max:255|unique:sections',
             'description' => 'nullable|string',
-            'image_path' => 'nullable|image|max:2048'
+            'image_path' => 'nullable|image|max:8192'
         ]);
 
         $data = $request->except('image_path');
@@ -55,7 +55,7 @@ class SectionController extends Controller
         $request->validate([
             'name' => 'required|string|max:255|unique:sections,name,' . $section->id,
             'description' => 'nullable|string',
-            'image_path' => 'nullable|image|max:2048'
+            'image_path' => 'nullable|image|max:8192'
         ]);
 
         $data = $request->except('image_path');

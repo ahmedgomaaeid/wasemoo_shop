@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin - Wasemoo Shop</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="icon" type="image/png" href="{{ asset('imgs/logo.png') }}">
 </head>
 <body class="bg-gray-100 font-sans antialiased text-gray-900 h-screen overflow-hidden relative">
     
     <!-- Sidebar (Always rendered underneath on mobile, static on desktop) -->
     <aside class="fixed inset-y-0 left-0 w-64 bg-white z-0 border-r border-gray-200 flex flex-col">
-        <div class="h-16 flex items-center justify-between px-6 border-b border-gray-100 flex-shrink-0">
-            <span class="text-xl font-bold text-indigo-600 tracking-tight">Admin<span class="text-gray-800">Panel</span></span>
+        <div class="h-16 flex items-center justify-center px-6 border-b border-gray-100 flex-shrink-0 py-2">
+            <img src="{{ asset('imgs/logo.png') }}" alt="Wasemoo Admin" class="h-10 w-auto">
         </div>
         <div class="p-4 flex-grow overflow-y-auto">
             <ul class="space-y-2">
@@ -67,7 +68,7 @@
                 <button id="toggle-sidebar" class="p-2 -ml-2 mr-3 text-gray-500 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </button>
-                <span class="text-lg font-bold text-indigo-600">AdminPanel</span>
+                <img src="{{ asset('imgs/logo.png') }}" alt="Wasemoo" class="h-8 w-auto">
             </div>
             <div class="flex items-center">
                 <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold border border-indigo-200">

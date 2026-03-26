@@ -30,7 +30,7 @@ class ProductController extends Controller
             'price' => 'required|numeric|min:0',
             'discount_price' => 'nullable|numeric|min:0|lt:price',
             'description' => 'nullable|string',
-            'image_path' => 'nullable|image|max:2048',
+            'image_path' => 'nullable|image|max:8192',
         ]);
 
         $data = $request->except('image_path', 'is_latest');
@@ -65,7 +65,7 @@ class ProductController extends Controller
             'price' => 'required|numeric|min:0',
             'discount_price' => 'nullable|numeric|min:0|lt:price',
             'description' => 'nullable|string',
-            'image_path' => 'nullable|image|max:2048',
+            'image_path' => 'nullable|image|max:8192',
         ]);
 
         $data = $request->except('image_path', 'is_latest');

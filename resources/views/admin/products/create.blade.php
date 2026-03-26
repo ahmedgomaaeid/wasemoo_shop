@@ -92,7 +92,7 @@
                                 </label>
                             </div>
                             <p class="text-xs text-gray-500 mt-2">
-                                PNG, JPG, WEBP up to 2MB
+                                PNG, JPG, WEBP up to 8MB
                             </p>
                         </div>
                     </div>

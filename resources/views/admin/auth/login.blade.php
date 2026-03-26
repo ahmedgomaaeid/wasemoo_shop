@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin Login - Wasemoo Shop</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="icon" type="image/png" href="{{ asset('imgs/logo.png') }}">
 </head>
 <body class="bg-white font-sans antialiased text-gray-900 h-screen flex overflow-hidden">
     
@@ -12,11 +13,8 @@
     <div class="w-full lg:w-1/2 flex flex-col justify-center px-8 sm:px-16 md:px-24 lg:px-32 xl:px-40 relative z-10 bg-white h-full overflow-y-auto shadow-2xl">
         <div class="w-full max-w-md mx-auto py-12">
             <!-- Logo / Brand -->
-            <div class="mb-10 flex items-center gap-3">
-                <div class="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-indigo-200">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
-                </div>
-                <span class="text-2xl font-bold tracking-tight text-gray-900">Wasemoo Shop</span>
+            <div class="mb-10 flex items-center">
+                <img src="{{ asset('imgs/logo.png') }}" alt="Wasemoo Shop" class="h-14 w-auto">
             </div>
 
             <!-- Header -->
