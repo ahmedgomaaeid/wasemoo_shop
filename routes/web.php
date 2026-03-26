@@ -42,5 +42,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
         Route::resource('sections', AdminSectionController::class);
         Route::resource('products', AdminProductController::class);
+        Route::get('orders', [\App\Http\Controllers\Admin\OrderController::class, 'index'])->name('orders.index');
     });
 });
