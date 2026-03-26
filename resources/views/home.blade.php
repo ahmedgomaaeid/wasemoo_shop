@@ -29,7 +29,7 @@
         </div>
     </div>
     <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&ixqx=placeholder&auto=format&fit=crop&w=1350&q=80" alt="Store interior">
+        <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://www.wasemoo.com/imgs/lan2.png" alt="Store interior">
     </div>
 </div>
 
