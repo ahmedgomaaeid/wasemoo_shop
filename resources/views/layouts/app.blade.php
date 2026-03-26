@@ -34,15 +34,16 @@
         <div class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
             <div class="md:flex md:items-center md:justify-between">
                 
-                <div class="flex justify-center md:justify-start md:order-2">
+                <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 md:order-2">
                     <img src="{{ asset('imgs/Visa-Mastercard-logos-footer.png') }}" alt="Visa and Mastercard Secure Payment" class="h-10 w-auto object-contain">
+                    <img src="{{ asset('imgs/lahza.png') }}" alt="Lahza Payment Gateway" class="h-10 w-auto object-contain">
                 </div>
-                
-                <div class="mt-8 md:mt-0 md:order-1 flex flex-col items-center md:items-start">
-                    <p class="text-center md:text-left text-gray-500 text-sm font-medium">
+                <p class="text-center md:text-left text-gray-500 text-sm font-medium">
                         &copy; {{ date('Y') }} Wasemoo Shop. All rights reserved.
                     </p>
-                    <div class="mt-3 text-sm text-gray-500 flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-2">
+                <div class="md:mt-0 md:order-1 flex flex-col items-center md:items-start">
+                    
+                    <div class="text-sm text-gray-500 flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-2">
                         <a href="{{ route('terms') }}" class="hover:text-indigo-600 font-medium transition-colors border-b border-transparent hover:border-indigo-600 pb-0.5">Privacy, Terms & Refund Policy</a>
                         <a href="{{ route('frontend.contact') }}" class="hover:text-indigo-600 font-medium transition-colors border-b border-transparent hover:border-indigo-600 pb-0.5">Contact Us</a>
                     </div>
