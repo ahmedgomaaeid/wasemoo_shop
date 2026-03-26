@@ -11,7 +11,9 @@ class Product extends Model
 
     protected $fillable = [
         'section_id', 'name', 'slug', 'description', 
-        'price', 'discount_price', 'image_path', 'is_latest'
+        'price', 'discount_price',        'image_path',
+        'is_latest',
+        'product_link',
     ];
 
     public function section()

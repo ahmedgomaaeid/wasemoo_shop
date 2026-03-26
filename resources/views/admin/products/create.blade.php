@@ -19,6 +19,7 @@
             @csrf
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Name -->
                 <div class="md:col-span-2">
                     <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Product Name <span class="text-red-500">*</span></label>
                     <input type="text" name="name" id="name" value="{{ old('name') }}" required 
@@ -28,6 +29,7 @@
                     @enderror
                 </div>
 
+                <!-- Section -->
                 <div>
                     <label for="section_id" class="block text-sm font-medium text-gray-700 mb-2">Section <span class="text-red-500">*</span></label>
                     <select name="section_id" id="section_id" required 
@@ -42,6 +44,7 @@
                     @enderror
                 </div>
 
+                <!-- Latest Checkbox -->
                 <div class="flex items-end mb-2">
                     <label for="is_latest" class="inline-flex items-center cursor-pointer">
                         <input type="checkbox" name="is_latest" id="is_latest" value="1" {{ old('is_latest', true) ? 'checked' : '' }}
@@ -50,6 +53,7 @@
                     </label>
                 </div>
 
+                <!-- Price -->
                 <div>
                     <label for="price" class="block text-sm font-medium text-gray-700 mb-2">Price ($) <span class="text-red-500">*</span></label>
                     <input type="number" step="0.01" min="0" name="price" id="price" value="{{ old('price') }}" required 
@@ -59,6 +63,7 @@
                     @enderror
                 </div>
 
+                <!-- Discount Price -->
                 <div>
                     <label for="discount_price" class="block text-sm font-medium text-gray-700 mb-2">Discount Price ($) <span class="text-gray-400 font-normal">(Optional)</span></label>
                     <input type="number" step="0.01" min="0" name="discount_price" id="discount_price" value="{{ old('discount_price') }}" 
@@ -69,6 +74,17 @@
                     @enderror
                 </div>
 
+                <!-- Product Link -->
+                <div class="md:col-span-2">
+                    <label for="product_link" class="block text-sm font-medium text-gray-700 mb-2">Product Link <span class="text-gray-400 font-normal">(Optional)</span></label>
+                    <input type="url" name="product_link" id="product_link" value="{{ old('product_link') }}" placeholder="https://..."
+                        class="w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm border p-3 transition-colors">
+                    @error('product_link')
+                        <p class="mt-1.5 text-sm text-red-600 font-medium">{{ $message }}</p>
+                    @enderror
+                </div>
+
+                <!-- Description -->
                 <div class="md:col-span-2">
                     <label for="description" class="block text-sm font-medium text-gray-700 mb-2">Description</label>
                     <textarea name="description" id="description" rows="5" 
@@ -78,6 +94,7 @@
                     @enderror
                 </div>
 
+                <!-- Image -->
                 <div class="md:col-span-2">
                     <label for="image_path" class="block text-sm font-medium text-gray-700 mb-2">Product Image</label>
                     <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">

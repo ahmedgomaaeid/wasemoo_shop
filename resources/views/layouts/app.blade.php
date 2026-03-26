@@ -30,10 +30,25 @@
         @yield('content')
     </main>
 
-    <footer class="bg-white border-t border-gray-200 mt-12 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
-            &copy; {{ date('Y') }} Wasemoo Shop. All rights reserved. <br>
-            Designed with <span class="text-red-500">&hearts;</span> for a stylish experience.
+    <footer class="bg-white border-t border-gray-100 mt-auto">
+        <div class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                
+                <div class="flex justify-center md:justify-start md:order-2">
+                    <img src="{{ asset('imgs/Visa-Mastercard-logos-footer.png') }}" alt="Visa and Mastercard Secure Payment" class="h-10 w-auto object-contain">
+                </div>
+                
+                <div class="mt-8 md:mt-0 md:order-1 flex flex-col items-center md:items-start">
+                    <p class="text-center md:text-left text-gray-500 text-sm font-medium">
+                        &copy; {{ date('Y') }} Wasemoo Shop. All rights reserved.
+                    </p>
+                    <div class="mt-3 text-sm text-gray-500 flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-2">
+                        <a href="{{ route('terms') }}" class="hover:text-indigo-600 font-medium transition-colors border-b border-transparent hover:border-indigo-600 pb-0.5">Privacy, Terms & Refund Policy</a>
+                        <a href="{{ route('frontend.contact') }}" class="hover:text-indigo-600 font-medium transition-colors border-b border-transparent hover:border-indigo-600 pb-0.5">Contact Us</a>
+                    </div>
+                </div>
+                
+            </div>
         </div>
     </footer>
 </body>

@@ -12,6 +12,15 @@ Route::get('/login', function () {
     return redirect()->route('admin.login');
 })->name('login');
 
+// Static Pages
+Route::get('/terms-and-policies', function () {
+    return view('frontend.terms');
+})->name('terms');
+
+// Contact Us
+Route::get('/contact-us', [\App\Http\Controllers\ContactController::class, 'index'])->name('frontend.contact');
+Route::post('/contact-us', [\App\Http\Controllers\ContactController::class, 'store'])->name('frontend.contact.store');
+
 // Frontend Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/section/{slug}', [HomeController::class, 'section'])->name('frontend.section');
@@ -43,5 +52,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('sections', AdminSectionController::class);
         Route::resource('products', AdminProductController::class);
         Route::get('orders', [\App\Http\Controllers\Admin\OrderController::class, 'index'])->name('orders.index');
+        Route::resource('contacts', \App\Http\Controllers\Admin\ContactController::class)->only(['index', 'show', 'destroy']);
     });
 });

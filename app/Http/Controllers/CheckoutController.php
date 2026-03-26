@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use App\Models\Product;
+use App\Mail\OrderInvoice;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 
 class CheckoutController extends Controller
 {
@@ -104,6 +106,14 @@ class CheckoutController extends Controller
             if ($res->data->status == 'success') {
                 $order->type = 1; // Success
                 $order->save();
+
+                // Send Email Invoice
+                try {
+                    Mail::to($order->email)->send(new OrderInvoice($order));
+                } catch (\Exception $e) {
+                    Log::error('Invoice Email Failed: ' . $e->getMessage());
+                }
+
                 return redirect()->route('checkout.success', $order);
             } else {
                 $order->type = 2; // Failed
